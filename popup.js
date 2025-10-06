@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const word = wordInput.value.trim();
     if (!word) return;
     chrome.runtime.sendMessage({ action: 'searchWord', word });
-    // window.close() removed to keep the popup open
   });
 
   wordInput.addEventListener('keydown', e => {
